@@ -15,8 +15,8 @@
         /* Custom Styles */
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #F5F5DC; /* Creamy Vanilla */
-            color: #7B3F00; /* Chocolate Brown */
+            background-color: #FFFFFF; /* White background */
+            color: #4A3B2A; /* Dark Brown text on light */
             overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
@@ -24,25 +24,36 @@
             font-family: 'Pacifico', cursive;
         }
 
-        /* Primary Colors */
-        .bg-pastel-pink { background-color: #FFD1DC; }
-        .text-pastel-pink { color: #FFD1DC; }
-        .border-pastel-pink { border-color: #FFD1DC; }
+        /* New Palette Color Classes */
+        .bg-primary { background-color: #D2BB7C; } /* Light Brownish-Gold */
+        .text-primary { color: #D2BB7C; }
+        .border-primary { border-color: #D2BB7C; }
 
-        .bg-mint-green { background-color: #A2E4B8; }
-        .text-mint-green { color: #A2E4B8; }
+        .bg-secondary { background-color: #333333; } /* Dark Gray */
+        .text-secondary { color: #333333; }
+        .border-secondary { border-color: #333333; }
 
-        .bg-creamy-vanilla { background-color: #F5F5DC; }
-        .text-creamy-vanilla { color: #F5F5DC; }
+        .text-on-dark { color: #F5F5F5; } /* Off-white text for dark backgrounds */
+        .text-on-light { color: #4A3B2A; } /* Dark Brown text for light backgrounds */
 
-        /* Accent Colors */
-        .bg-chocolate-brown { background-color: #7B3F00; }
-        .text-chocolate-brown { color: #7B3F00; }
-        .border-chocolate-brown { border-color: #7B3F00; }
+        /* Old classes retained for now, will be replaced by Tailwind or new classes */
+        .bg-pastel-pink { background-color: #D2BB7C; } /* Was #FFD1DC, now Primary */
+        .text-pastel-pink { color: #D2BB7C; } /* Was #FFD1DC, now Primary */
+        .border-pastel-pink { border-color: #D2BB7C; } /* Was #FFD1DC, now Primary */
+
+        .bg-mint-green { background-color: #333333; } /* Was #A2E4B8, now Secondary (example, might change to a lighter accent) */
+        .text-mint-green { color: #333333; } /* Was #A2E4B8, now Secondary */
+
+        .bg-creamy-vanilla { background-color: #FFFFFF; } /* Was #F5F5DC, now White */
+        .text-creamy-vanilla { color: #F5F5F5; } /* Was #F5F5DC, now text-on-dark (if on dark bg) or primary for effect */
+
+        .bg-chocolate-brown { background-color: #4A3B2A; } /* Was #7B3F00, now text-on-light (as a bg) */
+        .text-chocolate-brown { color: #4A3B2A; } /* Was #7B3F00, now text-on-light */
+        .border-chocolate-brown { border-color: #4A3B2A; } /* Was #7B3F00, now text-on-light */
 
         /* Hero Parallax Effect */
         .hero-section {
-            background-image: url('https://placehold.co/1920x1080/FFD1DC/7B3F00?text=Amazing+Cupcakes+Here');
+            background-image: url('https://placehold.co/1920x1080/D2BB7C/4A3B2A?text=Amazing+Cupcakes+Here'); /* Primary BG, TextOnLight for text */
             background-attachment: fixed; /* Creates the parallax effect */
             background-position: center;
             background-repeat: no-repeat;
@@ -63,7 +74,7 @@
         }
         .sticky-nav.scrolled {
             transform: translateY(0);
-            background-color: rgba(245, 245, 220, 0.95); /* Slightly transparent Creamy Vanilla */
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent White */
         }
         
         /* Cupcake Card Hover Effect */
@@ -151,171 +162,184 @@
         }
     </style>
 </head>
-<body class="bg-creamy-vanilla text-chocolate-brown">
+<body class="text-on-light"> <!-- Default text color, body bg is white from <style> -->
 
-    <nav id="mainNav" class="bg-creamy-vanilla/80 backdrop-blur-md shadow-md fixed w-full z-50 transition-all duration-300">
+    <!-- Main Navigation: bg-white, text-on-light, hover:text-primary -->
+    <nav id="mainNav" class="bg-white/80 backdrop-blur-md shadow-md fixed w-full z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-3">
             <div class="flex items-center justify-between">
-                <a href="#" class="text-3xl font-heading text-chocolate-brown hover:text-pastel-pink transition-colors">Sweet Surrender</a>
+                <a href="#"><img src="logo.jpg" alt="Sweet Surrender Logo" class="h-10 w-auto"></a>
                 
-                <div class="hidden md:flex space-x-6 items-center">
-                    <a href="#home" class="nav-link hover:text-pastel-pink transition-colors">Home</a>
-                    <a href="#about" class="nav-link hover:text-pastel-pink transition-colors">About Us</a>
-                    <a href="#cupcakes" class="nav-link hover:text-pastel-pink transition-colors">Cupcakes</a>
-                    <a href="#gallery" class="nav-link hover:text-pastel-pink transition-colors">Gallery</a>
-                    <a href="#contact" class="nav-link hover:text-pastel-pink transition-colors">Contact</a>
+                <div class="hidden md:flex space-x-6 items-center text-on-light">
+                    <a href="#home" class="nav-link hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="nav-link hover:text-primary transition-colors">About Us</a>
+                    <a href="#cupcakes" class="nav-link hover:text-primary transition-colors">Cupcakes</a>
+                    <a href="#gallery" class="nav-link hover:text-primary transition-colors">Gallery</a>
+                    <a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a>
                 </div>
 
                 <div class="md:hidden">
-                    <button id="mobileMenuButton" class="text-chocolate-brown focus:outline-none">
+                    <button id="mobileMenuButton" class="text-on-light focus:outline-none">
                         <i class="fas fa-bars fa-lg"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <div id="mobileMenu" class="hidden md:hidden bg-creamy-vanilla shadow-lg">
-            <a href="#home" class="block py-3 px-6 text-sm hover:bg-pastel-pink hover:text-white transition-colors nav-link-mobile">Home</a>
-            <a href="#about" class="block py-3 px-6 text-sm hover:bg-pastel-pink hover:text-white transition-colors nav-link-mobile">About Us</a>
-            <a href="#cupcakes" class="block py-3 px-6 text-sm hover:bg-pastel-pink hover:text-white transition-colors nav-link-mobile">Cupcakes</a>
-            <a href="#gallery" class="block py-3 px-6 text-sm hover:bg-pastel-pink hover:text-white transition-colors nav-link-mobile">Gallery</a>
-            <a href="#contact" class="block py-3 px-6 text-sm hover:bg-pastel-pink hover:text-white transition-colors nav-link-mobile">Contact</a>
+        <!-- Mobile Menu: bg-white, text-on-light, hover:bg-primary, hover:text-on-dark -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#home" class="block py-3 px-6 text-sm text-on-light hover:bg-primary hover:text-on-dark transition-colors nav-link-mobile">Home</a>
+            <a href="#about" class="block py-3 px-6 text-sm text-on-light hover:bg-primary hover:text-on-dark transition-colors nav-link-mobile">About Us</a>
+            <a href="#cupcakes" class="block py-3 px-6 text-sm text-on-light hover:bg-primary hover:text-on-dark transition-colors nav-link-mobile">Cupcakes</a>
+            <a href="#gallery" class="block py-3 px-6 text-sm text-on-light hover:bg-primary hover:text-on-dark transition-colors nav-link-mobile">Gallery</a>
+            <a href="#contact" class="block py-3 px-6 text-sm text-on-light hover:bg-primary hover:text-on-dark transition-colors nav-link-mobile">Contact</a>
         </div>
     </nav>
 
-    <nav id="stickyNav" class="sticky-nav bg-creamy-vanilla/95 backdrop-blur-md">
+    <!-- Sticky Navigation: bg-white/95, text-on-light, hover:text-primary -->
+    <nav id="stickyNav" class="sticky-nav bg-white/95 backdrop-blur-md"> <!-- bg is white from style, updated -->
          <div class="container mx-auto px-6 py-3">
             <div class="flex items-center justify-between">
-                <a href="#" class="text-3xl font-heading text-chocolate-brown hover:text-pastel-pink transition-colors">Sweet Surrender</a>
-                <div class="hidden md:flex space-x-6 items-center">
-                    <a href="#home" class="nav-link hover:text-pastel-pink transition-colors">Home</a>
-                    <a href="#about" class="nav-link hover:text-pastel-pink transition-colors">About Us</a>
-                    <a href="#cupcakes" class="nav-link hover:text-pastel-pink transition-colors">Cupcakes</a>
-                    <a href="#gallery" class="nav-link hover:text-pastel-pink transition-colors">Gallery</a>
-                    <a href="#contact" class="nav-link hover:text-pastel-pink transition-colors">Contact</a>
+                <a href="#"><img src="logo.jpg" alt="Sweet Surrender Logo" class="h-10 w-auto"></a>
+                <div class="hidden md:flex space-x-6 items-center text-on-light">
+                    <a href="#home" class="nav-link hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="nav-link hover:text-primary transition-colors">About Us</a>
+                    <a href="#cupcakes" class="nav-link hover:text-primary transition-colors">Cupcakes</a>
+                    <a href="#gallery" class="nav-link hover:text-primary transition-colors">Gallery</a>
+                    <a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a>
                 </div>
                  <div class="md:hidden">
-                    <button id="stickyMobileMenuButton" class="text-chocolate-brown focus:outline-none">
+                    <button id="stickyMobileMenuButton" class="text-on-light focus:outline-none">
                         <i class="fas fa-bars fa-lg"></i>
                     </button>
                 </div>
             </div>
         </div>
-         <div id="stickyMobileMenu" class="hidden md:hidden bg-creamy-vanilla shadow-lg">
-            <a href="#home" class="block py-3 px-6 text-sm hover:bg-pastel-pink hover:text-white transition-colors nav-link-mobile-sticky">Home</a>
-            <a href="#about" class="block py-3 px-6 text-sm hover:bg-pastel-pink hover:text-white transition-colors nav-link-mobile-sticky">About Us</a>
-            <a href="#cupcakes" class="block py-3 px-6 text-sm hover:bg-pastel-pink hover:text-white transition-colors nav-link-mobile-sticky">Cupcakes</a>
-            <a href="#gallery" class="block py-3 px-6 text-sm hover:bg-pastel-pink hover:text-white transition-colors nav-link-mobile-sticky">Gallery</a>
-            <a href="#contact" class="block py-3 px-6 text-sm hover:bg-pastel-pink hover:text-white transition-colors nav-link-mobile-sticky">Contact</a>
+         <!-- Sticky Mobile Menu: bg-white, text-on-light, hover:bg-primary, hover:text-on-dark -->
+         <div id="stickyMobileMenu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#home" class="block py-3 px-6 text-sm text-on-light hover:bg-primary hover:text-on-dark transition-colors nav-link-mobile-sticky">Home</a>
+            <a href="#about" class="block py-3 px-6 text-sm text-on-light hover:bg-primary hover:text-on-dark transition-colors nav-link-mobile-sticky">About Us</a>
+            <a href="#cupcakes" class="block py-3 px-6 text-sm text-on-light hover:bg-primary hover:text-on-dark transition-colors nav-link-mobile-sticky">Cupcakes</a>
+            <a href="#gallery" class="block py-3 px-6 text-sm text-on-light hover:bg-primary hover:text-on-dark transition-colors nav-link-mobile-sticky">Gallery</a>
+            <a href="#contact" class="block py-3 px-6 text-sm text-on-light hover:bg-primary hover:text-on-dark transition-colors nav-link-mobile-sticky">Contact</a>
         </div>
     </nav>
 
 
+    <!-- Hero Section: bg defined in .hero-section (primary), text-on-dark -->
     <header id="home" class="hero-section flex items-center justify-center text-center relative">
         <div class="absolute inset-0 bg-black/30"></div> <div class="relative z-10 p-6" data-aos="fade-up" data-aos-duration="1000">
-            <h1 class="text-5xl md:text-7xl font-heading text-white mb-6">Life's Sweeter with a Cupcake.</h1>
-            <p class="text-xl md:text-2xl text-creamy-vanilla mb-8 max-w-2xl mx-auto">Baking happiness, one delightful treat at a time. Discover your new favorite!</p>
-            <a href="#cupcakes" class="bg-pastel-pink text-chocolate-brown font-semibold py-3 px-8 rounded-lg text-lg hover:bg-mint-green hover:text-chocolate-brown transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <h1 class="text-5xl md:text-7xl font-heading text-on-dark mb-6">Life's Sweeter with a Cupcake.</h1>
+            <p class="text-xl md:text-2xl text-on-dark mb-8 max-w-2xl mx-auto">Baking happiness, one delightful treat at a time. Discover your new favorite!</p>
+            <!-- Button: bg-secondary, text-on-dark, hover:bg-opacity-80 -->
+            <a href="#cupcakes" class="bg-secondary text-on-dark font-semibold py-3 px-8 rounded-lg text-lg hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Discover Our Flavors <i class="fas fa-arrow-right ml-2"></i>
             </a>
         </div>
     </header>
 
-    <section class="section-padding bg-creamy-vanilla">
+    <!-- Star Attractions Section: bg-white (default from body), heading text-on-light -->
+    <section class="section-padding bg-white"> <!-- Was bg-creamy-vanilla -->
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-heading mb-12 text-chocolate-brown" data-aos="fade-up">Our Star Attractions</h2>
+            <h2 class="text-4xl font-heading mb-12 text-on-light" data-aos="fade-up">Our Star Attractions</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1: heading text-primary -->
                 <div class="bg-white p-6 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://placehold.co/300x300/FFD1DC/7B3F00?text=Velvet+Dream" alt="Velvet Dream Cupcake" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-2xl font-heading text-pastel-pink mb-2">Velvet Dream</h3>
-                    <p class="text-sm text-gray-600">Classic red velvet with a rich cream cheese frosting.</p>
+                    <img src="https://placehold.co/300x300/D2BB7C/4A3B2A?text=Velvet+Dream" alt="Velvet Dream Cupcake" class="w-full h-48 object-cover rounded-lg mb-4"> <!-- Img BG: Primary, Text: TextOnLight -->
+                    <h3 class="text-2xl font-heading text-primary mb-2">Velvet Dream</h3>
+                    <p class="text-sm text-on-light">Classic red velvet with a rich cream cheese frosting.</p> <!-- Keep text-gray-600 for now or change to text-on-light -->
                 </div>
+                <!-- Card 2: heading text-primary (example for consistency, could be another accent) -->
                 <div class="bg-white p-6 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://placehold.co/300x300/A2E4B8/7B3F00?text=Choco+Bliss" alt="Chocolate Bliss Cupcake" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-2xl font-heading text-mint-green mb-2">Choco Bliss</h3>
-                    <p class="text-sm text-gray-600">Decadent chocolate cake with a smooth chocolate ganache.</p>
+                    <img src="https://placehold.co/300x300/D2BB7C/4A3B2A?text=Choco+Bliss" alt="Chocolate Bliss Cupcake" class="w-full h-48 object-cover rounded-lg mb-4"> <!-- Img BG: Primary, Text: TextOnLight -->
+                    <h3 class="text-2xl font-heading text-primary mb-2">Choco Bliss</h3>
+                    <p class="text-sm text-on-light">Decadent chocolate cake with a smooth chocolate ganache.</p>
                 </div>
+                <!-- Card 3: heading text-primary -->
                 <div class="bg-white p-6 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://placehold.co/300x300/F5F5DC/7B3F00?text=Lemon+Zest" alt="Lemon Zest Cupcake" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-2xl font-heading text-yellow-400 mb-2">Lemon Zest</h3>
-                    <p class="text-sm text-gray-600">Tangy lemon cupcake with a light lemon buttercream.</p>
+                    <img src="https://placehold.co/300x300/D2BB7C/4A3B2A?text=Lemon+Zest" alt="Lemon Zest Cupcake" class="w-full h-48 object-cover rounded-lg mb-4"> <!-- Img BG: Primary, Text: TextOnLight -->
+                    <h3 class="text-2xl font-heading text-primary mb-2">Lemon Zest</h3>
+                    <p class="text-sm text-on-light">Tangy lemon cupcake with a light lemon buttercream.</p>
                 </div>
+                 <!-- Card 4: heading text-primary -->
                  <div class="bg-white p-6 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="400">
-                    <img src="https://placehold.co/300x300/D2B48C/7B3F00?text=Caramel+Swirl" alt="Caramel Swirl Cupcake" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-2xl font-heading text-yellow-600 mb-2">Caramel Swirl</h3>
-                    <p class="text-sm text-gray-600">Vanilla cupcake with a gooey caramel center and caramel frosting.</p>
+                    <img src="https://placehold.co/300x300/D2BB7C/4A3B2A?text=Caramel+Swirl" alt="Caramel Swirl Cupcake" class="w-full h-48 object-cover rounded-lg mb-4"> <!-- Img BG: Primary, Text: TextOnLight -->
+                    <h3 class="text-2xl font-heading text-primary mb-2">Caramel Swirl</h3>
+                    <p class="text-sm text-on-light">Vanilla cupcake with a gooey caramel center and caramel frosting.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="cupcakes" class="section-padding bg-pastel-pink/30">
+    <!-- Delectable Creations Section: bg-primary/30 (light primary), heading text-on-light -->
+    <section id="cupcakes" class="section-padding" style="background-color: rgba(210, 187, 124, 0.3);"> <!-- Was bg-pastel-pink/30 -->
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-heading text-center mb-12 text-chocolate-brown" data-aos="fade-up">Our Delectable Creations</h2>
+            <h2 class="text-4xl font-heading text-center mb-12 text-on-light" data-aos="fade-up">Our Delectable Creations</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Card: Heading text-primary, body text text-on-light or text-gray-700 -->
                 <div class="cupcake-card bg-white rounded-xl shadow-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://placehold.co/400x300/FFB6C1/7B3F00?text=Strawberry+Shortcake" alt="Strawberry Shortcake Cupcake" class="w-full h-64 object-cover">
+                    <img src="https://placehold.co/400x300/D2BB7C/4A3B2A?text=Strawberry+Kiss" alt="Strawberry Shortcake Cupcake" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-3xl font-heading text-pastel-pink mb-3">Strawberry Kiss</h3>
-                        <p class="text-gray-700 mb-4">A light vanilla cupcake filled with fresh strawberry compote, topped with whipped cream frosting and a fresh strawberry.</p>
+                        <h3 class="text-3xl font-heading text-primary mb-3">Strawberry Kiss</h3>
+                        <p class="text-on-light mb-4">A light vanilla cupcake filled with fresh strawberry compote, topped with whipped cream frosting and a fresh strawberry.</p>
                         <div class="details">
-                            <p class="text-sm text-gray-500 mb-1"><strong>Ingredients:</strong> Flour, sugar, eggs, strawberries, cream.</p>
-                            <p class="text-sm text-gray-500"><strong>Allergens:</strong> Gluten, Dairy, Eggs.</p>
+                            <p class="text-sm text-on-light mb-1"><strong>Ingredients:</strong> Flour, sugar, eggs, strawberries, cream.</p>
+                            <p class="text-sm text-on-light"><strong>Allergens:</strong> Gluten, Dairy, Eggs.</p>
                         </div>
                     </div>
                 </div>
                 <div class="cupcake-card bg-white rounded-xl shadow-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://placehold.co/400x300/87CEEB/7B3F00?text=Blueberry+Blast" alt="Blueberry Blast Cupcake" class="w-full h-64 object-cover">
+                    <img src="https://placehold.co/400x300/D2BB7C/4A3B2A?text=Blueberry+Blast" alt="Blueberry Blast Cupcake" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-3xl font-heading text-blue-400 mb-3">Blueberry Blast</h3>
-                        <p class="text-gray-700 mb-4">Moist blueberry-studded cake with a lemon-blueberry swirl cream cheese frosting.</p>
+                        <h3 class="text-3xl font-heading text-primary mb-3">Blueberry Blast</h3> <!-- Was text-blue-400 -->
+                        <p class="text-on-light mb-4">Moist blueberry-studded cake with a lemon-blueberry swirl cream cheese frosting.</p>
                         <div class="details">
-                            <p class="text-sm text-gray-500 mb-1"><strong>Ingredients:</strong> Flour, sugar, eggs, blueberries, cream cheese.</p>
-                            <p class="text-sm text-gray-500"><strong>Allergens:</strong> Gluten, Dairy, Eggs.</p>
+                            <p class="text-sm text-on-light mb-1"><strong>Ingredients:</strong> Flour, sugar, eggs, blueberries, cream cheese.</p>
+                            <p class="text-sm text-on-light"><strong>Allergens:</strong> Gluten, Dairy, Eggs.</p>
                         </div>
                     </div>
                 </div>
                  <div class="cupcake-card bg-white rounded-xl shadow-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://placehold.co/400x300/98FB98/7B3F00?text=Mint+Condition" alt="Mint Condition Cupcake" class="w-full h-64 object-cover">
+                    <img src="https://placehold.co/400x300/D2BB7C/4A3B2A?text=Mint+Condition" alt="Mint Condition Cupcake" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-3xl font-heading text-mint-green mb-3">Mint Condition</h3>
-                        <p class="text-gray-700 mb-4">Dark chocolate cupcake infused with mint, topped with a refreshing mint buttercream and chocolate shavings.</p>
+                        <h3 class="text-3xl font-heading text-primary mb-3">Mint Condition</h3> <!-- Was text-mint-green -->
+                        <p class="text-on-light mb-4">Dark chocolate cupcake infused with mint, topped with a refreshing mint buttercream and chocolate shavings.</p>
                         <div class="details">
-                            <p class="text-sm text-gray-500 mb-1"><strong>Ingredients:</strong> Flour, sugar, cocoa, mint extract, butter.</p>
-                            <p class="text-sm text-gray-500"><strong>Allergens:</strong> Gluten, Dairy, Eggs.</p>
+                            <p class="text-sm text-on-light mb-1"><strong>Ingredients:</strong> Flour, sugar, cocoa, mint extract, butter.</p>
+                            <p class="text-sm text-on-light"><strong>Allergens:</strong> Gluten, Dairy, Eggs.</p>
                         </div>
                     </div>
                 </div>
                 <div class="cupcake-card bg-white rounded-xl shadow-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://placehold.co/400x300/E6E6FA/7B3F00?text=Lavender+Dream" alt="Lavender Dream Cupcake" class="w-full h-64 object-cover">
+                    <img src="https://placehold.co/400x300/D2BB7C/4A3B2A?text=Lavender+Dream" alt="Lavender Dream Cupcake" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-3xl font-heading text-purple-400 mb-3">Lavender Dream</h3>
-                        <p class="text-gray-700 mb-4">Delicate lavender-infused vanilla cupcake with a honey-lavender frosting.</p>
+                        <h3 class="text-3xl font-heading text-primary mb-3">Lavender Dream</h3> <!-- Was text-purple-400 -->
+                        <p class="text-on-light mb-4">Delicate lavender-infused vanilla cupcake with a honey-lavender frosting.</p>
                         <div class="details">
-                            <p class="text-sm text-gray-500 mb-1"><strong>Ingredients:</strong> Flour, sugar, lavender, honey, butter.</p>
-                            <p class="text-sm text-gray-500"><strong>Allergens:</strong> Gluten, Dairy, Eggs.</p>
+                            <p class="text-sm text-on-light mb-1"><strong>Ingredients:</strong> Flour, sugar, lavender, honey, butter.</p>
+                            <p class="text-sm text-on-light"><strong>Allergens:</strong> Gluten, Dairy, Eggs.</p>
                         </div>
                     </div>
                 </div>
                  <div class="cupcake-card bg-white rounded-xl shadow-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://placehold.co/400x300/FFA07A/7B3F00?text=Peach+Perfection" alt="Peach Perfection Cupcake" class="w-full h-64 object-cover">
+                    <img src="https://placehold.co/400x300/D2BB7C/4A3B2A?text=Peach+Perfection" alt="Peach Perfection Cupcake" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-3xl font-heading text-orange-400 mb-3">Peach Perfection</h3>
-                        <p class="text-gray-700 mb-4">Sweet peach cupcake with a brown sugar cinnamon buttercream, topped with a fresh peach slice.</p>
+                        <h3 class="text-3xl font-heading text-primary mb-3">Peach Perfection</h3> <!-- Was text-orange-400 -->
+                        <p class="text-on-light mb-4">Sweet peach cupcake with a brown sugar cinnamon buttercream, topped with a fresh peach slice.</p>
                         <div class="details">
-                            <p class="text-sm text-gray-500 mb-1"><strong>Ingredients:</strong> Flour, sugar, peaches, cinnamon, butter.</p>
-                            <p class="text-sm text-gray-500"><strong>Allergens:</strong> Gluten, Dairy, Eggs.</p>
+                            <p class="text-sm text-on-light mb-1"><strong>Ingredients:</strong> Flour, sugar, peaches, cinnamon, butter.</p>
+                            <p class="text-sm text-on-light"><strong>Allergens:</strong> Gluten, Dairy, Eggs.</p>
                         </div>
                     </div>
                 </div>
                  <div class="cupcake-card bg-white rounded-xl shadow-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://placehold.co/400x300/FFD700/7B3F00?text=Vegan+Vanilla+Bean" alt="Vegan Vanilla Bean Cupcake" class="w-full h-64 object-cover">
+                    <img src="https://placehold.co/400x300/D2BB7C/4A3B2A?text=Vegan+Vanilla+Bean" alt="Vegan Vanilla Bean Cupcake" class="w-full h-64 object-cover">
                     <div class="p-6">
-                        <h3 class="text-3xl font-heading text-yellow-500 mb-3">Vegan Vanilla Bean</h3>
-                        <p class="text-gray-700 mb-4">A rich and moist vegan vanilla bean cupcake with a creamy plant-based vanilla frosting.</p>
+                        <h3 class="text-3xl font-heading text-primary mb-3">Vegan Vanilla Bean</h3> <!-- Was text-yellow-500 -->
+                        <p class="text-on-light mb-4">A rich and moist vegan vanilla bean cupcake with a creamy plant-based vanilla frosting.</p>
                         <div class="details">
-                            <p class="text-sm text-gray-500 mb-1"><strong>Ingredients:</strong> Plant-based flour, sugar, vanilla bean, vegan butter.</p>
-                            <p class="text-sm text-gray-500"><strong>Allergens:</strong> Gluten (check specific flour). Vegan.</p>
+                            <p class="text-sm text-on-light mb-1"><strong>Ingredients:</strong> Plant-based flour, sugar, vanilla bean, vegan butter.</p>
+                            <p class="text-sm text-on-light"><strong>Allergens:</strong> Gluten (check specific flour). Vegan.</p>
                         </div>
                     </div>
                 </div>
@@ -323,33 +347,35 @@
         </div>
     </section>
 
-    <section id="gallery" class="section-padding bg-creamy-vanilla">
+    <!-- Gallery Section: bg-white, heading text-on-light -->
+    <section id="gallery" class="section-padding bg-white"> <!-- Was bg-creamy-vanilla -->
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-heading text-center mb-12 text-chocolate-brown" data-aos="fade-up">Sweet Moments, Captured</h2>
+            <h2 class="text-4xl font-heading text-center mb-12 text-on-light" data-aos="fade-up">Sweet Moments, Captured</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Placeholder images updated -->
                 <div data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://placehold.co/400x400/FFC0CB/7B3F00?text=Birthday+Joy" alt="Birthday Cupcakes" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Colorful cupcakes for a joyful birthday celebration.">
+                    <img src="https://placehold.co/400x400/D2BB7C/4A3B2A?text=Birthday+Joy" alt="Birthday Cupcakes" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Colorful cupcakes for a joyful birthday celebration.">
                 </div>
                 <div data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://placehold.co/400x400/ADD8E6/7B3F00?text=Wedding+Elegance" alt="Wedding Cupcake Tower" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Elegant cupcake tower for a beautiful wedding.">
+                    <img src="https://placehold.co/400x400/333333/F5F5F5?text=Wedding+Elegance" alt="Wedding Cupcake Tower" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Elegant cupcake tower for a beautiful wedding."> <!-- Secondary BG, TextOnDark -->
                 </div>
                 <div data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://placehold.co/400x400/90EE90/7B3F00?text=Corporate+Treats" alt="Corporate Event Cupcakes" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Custom branded cupcakes for a corporate event.">
+                    <img src="https://placehold.co/400x400/D2BB7C/4A3B2A?text=Corporate+Treats" alt="Corporate Event Cupcakes" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Custom branded cupcakes for a corporate event.">
                 </div>
                 <div data-aos="zoom-in" data-aos-delay="400">
-                    <img src="https://placehold.co/400x400/FFFFE0/7B3F00?text=Holiday+Specials" alt="Holiday Cupcakes" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Festive cupcakes for the holiday season.">
+                    <img src="https://placehold.co/400x400/333333/F5F5F5?text=Holiday+Specials" alt="Holiday Cupcakes" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Festive cupcakes for the holiday season.">
                 </div>
                  <div data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://placehold.co/400x400/E0BBE4/7B3F00?text=Custom+Design+1" alt="Custom Design Cupcake" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Unique custom designed cupcake for a special request.">
+                    <img src="https://placehold.co/400x400/D2BB7C/4A3B2A?text=Custom+Design+1" alt="Custom Design Cupcake" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Unique custom designed cupcake for a special request.">
                 </div>
                 <div data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://placehold.co/400x400/FADADD/7B3F00?text=Baby+Shower+Sweetness" alt="Baby Shower Cupcakes" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Adorable cupcakes for a sweet baby shower.">
+                    <img src="https://placehold.co/400x400/333333/F5F5F5?text=Baby+Shower" alt="Baby Shower Cupcakes" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Adorable cupcakes for a sweet baby shower.">
                 </div>
                  <div data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://placehold.co/400x400/FFB347/7B3F00?text=Autumn+Flavors" alt="Autumn Themed Cupcakes" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Warm and cozy autumn-themed cupcakes.">
+                    <img src="https://placehold.co/400x400/D2BB7C/4A3B2A?text=Autumn+Flavors" alt="Autumn Themed Cupcakes" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Warm and cozy autumn-themed cupcakes.">
                 </div>
                  <div data-aos="zoom-in" data-aos-delay="400">
-                    <img src="https://placehold.co/400x400/B4E8C8/7B3F00?text=Garden+Party+Delights" alt="Garden Party Cupcakes" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Delightful cupcakes perfect for a garden party.">
+                    <img src="https://placehold.co/400x400/333333/F5F5F5?text=Garden+Party" alt="Garden Party Cupcakes" class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover" data-caption="Delightful cupcakes perfect for a garden party.">
                 </div>
             </div>
         </div>
@@ -361,103 +387,110 @@
         <div id="lightboxCaption" class="lightbox-caption"></div>
     </div>
 
-    <section id="about" class="section-padding bg-mint-green/30">
+    <!-- About Us Section: bg-secondary/30 (light secondary), heading text-on-light -->
+    <section id="about" class="section-padding" style="background-color: rgba(51, 51, 51, 0.1);"> <!-- Was bg-mint-green/30, now secondary with alpha -->
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-heading text-center mb-12 text-chocolate-brown" data-aos="fade-up">Our Story: Baked with Love</h2>
+            <h2 class="text-4xl font-heading text-center mb-12 text-on-light" data-aos="fade-up">Our Story: Baked with Love</h2>
             <div class="flex flex-col md:flex-row items-center gap-10">
                 <div class="md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
-                    <img src="https://placehold.co/600x400/F5F5DC/7B3F00?text=Our+Team+Baking" alt="Our Team Baking" class="rounded-xl shadow-xl w-full">
+                    <img src="https://placehold.co/600x400/D2BB7C/4A3B2A?text=Our+Team+Baking" alt="Our Team Baking" class="rounded-xl shadow-xl w-full">
                 </div>
                 <div class="md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
-                    <h3 class="text-3xl font-heading text-chocolate-brown mb-4">From Passion to Perfection</h3>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
+                    <h3 class="text-3xl font-heading text-on-light mb-4">From Passion to Perfection</h3>
+                    <p class="text-on-light mb-4 leading-relaxed"> <!-- text-gray-700 can be changed to text-on-light if contrast is good -->
                         Sweet Surrender started in a small home kitchen, fueled by a lifelong passion for baking and a dream to spread joy through delicious, handcrafted cupcakes. We believe that the best treats are made with love, the finest ingredients, and a sprinkle of creativity. 
                     </p>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
+                    <p class="text-on-light mb-4 leading-relaxed">
                         Our unique selling points? We use locally sourced ingredients whenever possible, offer a wide range of classic and innovative flavors (including vegan and gluten-free options!), and pour our hearts into every single bake. We're not just a bakery; we're a part of your celebrations.
                     </p>
-                    <img src="https://placehold.co/300x200/FFD1DC/7B3F00?text=Baking+Process" alt="Baking Process" class="rounded-lg shadow-md mt-4 inline-block mr-4" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://placehold.co/300x200/A2E4B8/7B3F00?text=Happy+Baker" alt="Happy Baker" class="rounded-lg shadow-md mt-4 inline-block" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://placehold.co/300x200/D2BB7C/4A3B2A?text=Baking+Process" alt="Baking Process" class="rounded-lg shadow-md mt-4 inline-block mr-4" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://placehold.co/300x200/333333/F5F5F5?text=Happy+Baker" alt="Happy Baker" class="rounded-lg shadow-md mt-4 inline-block" data-aos="zoom-in" data-aos-delay="400">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section-padding bg-creamy-vanilla">
+    <!-- Contact Section: bg-white, heading text-on-light -->
+    <section id="contact" class="section-padding bg-white"> <!-- Was bg-creamy-vanilla -->
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-heading text-center mb-12 text-chocolate-brown" data-aos="fade-up">Get in Touch!</h2>
+            <h2 class="text-4xl font-heading text-center mb-12 text-on-light" data-aos="fade-up">Get in Touch!</h2>
             <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl" data-aos="fade-up" data-aos-delay="200">
                 <form action="#" method="POST">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                            <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pastel-pink focus:border-pastel-pink transition-colors" placeholder="Your Name">
+                            <label for="name" class="block text-sm font-medium text-on-light mb-1">Full Name</label> <!-- text-gray-700 to text-on-light -->
+                            <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors" placeholder="Your Name"> <!-- ring-primary, border-primary -->
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                            <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pastel-pink focus:border-pastel-pink transition-colors" placeholder="you@example.com">
+                            <label for="email" class="block text-sm font-medium text-on-light mb-1">Email Address</label> <!-- text-gray-700 to text-on-light -->
+                            <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors" placeholder="you@example.com"> <!-- ring-primary, border-primary -->
                         </div>
                     </div>
                     <div class="mb-6">
-                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                        <input type="text" name="subject" id="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pastel-pink focus:border-pastel-pink transition-colors" placeholder="Order Inquiry, Feedback, etc.">
+                        <label for="subject" class="block text-sm font-medium text-on-light mb-1">Subject</label> <!-- text-gray-700 to text-on-light -->
+                        <input type="text" name="subject" id="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors" placeholder="Order Inquiry, Feedback, etc."> <!-- ring-primary, border-primary -->
                     </div>
                     <div class="mb-6">
-                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                        <textarea name="message" id="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pastel-pink focus:border-pastel-pink transition-colors" placeholder="Tell us about your cupcake dreams..."></textarea>
+                        <label for="message" class="block text-sm font-medium text-on-light mb-1">Message</label> <!-- text-gray-700 to text-on-light -->
+                        <textarea name="message" id="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors" placeholder="Tell us about your cupcake dreams..."></textarea> <!-- ring-primary, border-primary -->
                     </div>
                     <div>
-                        <button type="submit" class="w-full bg-pastel-pink text-chocolate-brown font-semibold py-3 px-6 rounded-lg text-lg hover:bg-mint-green transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <!-- Button: bg-primary, text-on-light, hover:bg-opacity-80 -->
+                        <button type="submit" class="w-full bg-primary text-on-light font-semibold py-3 px-6 rounded-lg text-lg hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 shadow-lg">
                             Send Message <i class="fas fa-paper-plane ml-2"></i>
                         </button>
                     </div>
                 </form>
                 <div class="mt-10 text-center">
-                    <p class="text-gray-600 mb-2">Or connect with us on social media:</p>
+                    <p class="text-on-light mb-2">Or connect with us on social media:</p> <!-- text-gray-600 to text-on-light -->
                     <div class="flex justify-center space-x-6">
-                        <a href="#" class="text-chocolate-brown hover:text-pastel-pink transition-colors text-2xl"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-chocolate-brown hover:text-pastel-pink transition-colors text-2xl"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-chocolate-brown hover:text-pastel-pink transition-colors text-2xl"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#" class="text-chocolate-brown hover:text-pastel-pink transition-colors text-2xl"><i class="fab fa-twitter"></i></a>
+                        <!-- Social Icons: text-on-light, hover:text-primary -->
+                        <a href="#" class="text-on-light hover:text-primary transition-colors text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-on-light hover:text-primary transition-colors text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-on-light hover:text-primary transition-colors text-2xl"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="text-on-light hover:text-primary transition-colors text-2xl"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-chocolate-brown text-creamy-vanilla py-12">
+    <!-- Footer: bg-secondary, text-on-dark -->
+    <footer class="bg-secondary text-on-dark py-12"> <!-- Was bg-chocolate-brown text-creamy-vanilla -->
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
                 <div>
-                    <h4 class="text-2xl font-heading mb-4 text-pastel-pink">Sweet Surrender</h4>
+                    <h4 class="text-2xl font-heading mb-4 text-primary">Sweet Surrender</h4> <!-- Heading text-primary -->
                     <p class="text-sm">Baking happiness, one cupcake at a time. Visit us for a delightful treat!</p>
                     <p class="text-sm mt-2">123 Cupcake Lane, Sweetville, CA 90210</p>
                 </div>
                 <div>
-                    <h5 class="text-lg font-semibold mb-4 text-pastel-pink">Quick Links</h5>
+                    <h5 class="text-lg font-semibold mb-4 text-primary">Quick Links</h5> <!-- Heading text-primary -->
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#home" class="hover:text-mint-green transition-colors">Home</a></li>
-                        <li><a href="#about" class="hover:text-mint-green transition-colors">About Us</a></li>
-                        <li><a href="#cupcakes" class="hover:text-mint-green transition-colors">Cupcakes</a></li>
-                        <li><a href="#gallery" class="hover:text-mint-green transition-colors">Gallery</a></li>
-                        <li><a href="#contact" class="hover:text-mint-green transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-mint-green transition-colors">FAQ</a></li>
+                        <!-- Links: text-on-dark, hover:text-primary -->
+                        <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#cupcakes" class="hover:text-primary transition-colors">Cupcakes</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition-colors">Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">FAQ</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h5 class="text-lg font-semibold mb-4 text-pastel-pink">Connect With Us</h5>
+                    <h5 class="text-lg font-semibold mb-4 text-primary">Connect With Us</h5> <!-- Heading text-primary -->
                     <div class="flex justify-center md:justify-start space-x-4 mb-4">
-                        <a href="#" class="text-creamy-vanilla hover:text-pastel-pink transition-colors text-xl"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-creamy-vanilla hover:text-pastel-pink transition-colors text-xl"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-creamy-vanilla hover:text-pastel-pink transition-colors text-xl"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#" class="text-creamy-vanilla hover:text-pastel-pink transition-colors text-xl"><i class="fab fa-twitter"></i></a>
+                        <!-- Social Icons: text-on-dark, hover:text-primary -->
+                        <a href="#" class="text-on-dark hover:text-primary transition-colors text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-on-dark hover:text-primary transition-colors text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-on-dark hover:text-primary transition-colors text-xl"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="text-on-dark hover:text-primary transition-colors text-xl"><i class="fab fa-twitter"></i></a>
                     </div>
-                    <p class="text-sm">Email: <a href="mailto:info@sweetsurrender.com" class="hover:text-mint-green transition-colors">info@sweetsurrender.com</a></p>
+                    <p class="text-sm">Email: <a href="mailto:info@sweetsurrender.com" class="hover:text-primary transition-colors">info@sweetsurrender.com</a></p>
                     <p class="text-sm">Phone: (555) 123-4567</p>
                 </div>
             </div>
-            <div class="mt-10 border-t border-creamy-vanilla/30 pt-8 text-center text-sm">
-                <p>&copy; <span id="currentYear"></span> Sweet Surrender. All Rights Reserved. Designed with <i class="fas fa-heart text-pastel-pink"></i>.</p>
+            <div class="mt-10 border-t border-on-dark/30 pt-8 text-center text-sm"> <!-- border-on-dark/30 -->
+                <p>&copy; <span id="currentYear"></span> Sweet Surrender. All Rights Reserved. Designed with <i class="fas fa-heart text-primary"></i>.</p> <!-- Heart text-primary -->
             </div>
         </div>
     </footer>
