@@ -70,7 +70,18 @@ body {
   color: #7b3f00;
 }
 .border-chocolate-brown {
-  border-color: #7b3f00;
+  border-color: #7b3F00;
+}
+
+/* Flavor Specific Text Colors */
+.text-strawberry {
+  color: #E53E3E; /* A nice red for strawberry */
+}
+.text-lotus {
+  color: #B87333; /* A caramel/brown for lotus */
+}
+.text-ferrero {
+  color: #654321; /* A rich brown for ferrero */
 }
 
 /* --- Component Styles --- */
