@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sweet Surrender - Delicious Cupcakes</title>
+    <meta name="description" content="Discover delicious, handcrafted cupcakes at Sweet Surrender. We offer a wide variety of flavors, including vegan and gluten-free options, baked with love and the finest ingredients. Order yours today!" />
+    <meta name="keywords" content="cupcakes, bakery, sweet treats, desserts, custom cupcakes, vegan cupcakes, gluten-free cupcakes, Sweet Surrender, gourmet cupcakes, handcrafted cupcakes" />
+    <link rel="canonical" href="https://www.sweetsurrender.com/index.html" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sweet Surrender - Delicious Cupcakes" />
+    <meta property="og:description" content="Indulge in a wide variety of handcrafted cupcakes, baked fresh daily with the finest ingredients. Vegan and gluten-free options available!" />
+    <meta property="og:image" content="https://placehold.co/400x300/FFB6C1/7B3F00?text=Strawberry+Shortcake" />
+    <meta property="og:url" content="https://www.sweetsurrender.com/index.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sweet Surrender - Delicious Cupcakes" />
+    <meta name="twitter:description" content="Life's sweeter with a cupcake from Sweet Surrender! Explore our delightful flavors and order your favorites." />
+    <meta name="twitter:image" content="https://placehold.co/400x300/FFB6C1/7B3F00?text=Strawberry+Shortcake" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
@@ -17,6 +34,99 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Bakery",
+      "name": "Sweet Surrender",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Cupcake Lane",
+        "addressLocality": "Sweetville",
+        "addressRegion": "CA",
+        "postalCode": "90210"
+      },
+      "telephone": "(555) 123-4567",
+      "email": "info@sweetsurrender.com",
+      "url": "https://www.sweetsurrender.com",
+      "image": "https://www.sweetsurrender.com/images/logo.png",
+      "description": "Sweet Surrender offers delicious, handcrafted cupcakes baked with love and the finest ingredients. Discover a wide range of classic and innovative flavors.",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "servesCuisine": "Desserts",
+      "hasMenu": "https://www.sweetsurrender.com/#cupcakes",
+      "potentialAction": {
+        "@type": "OrderAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.sweetsurrender.com/#contact",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/IOSPlatform",
+            "http://schema.org/AndroidPlatform"
+          ]
+        }
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Velvet Dream Cupcake",
+            "description": "Classic red velvet with a rich cream cheese frosting.",
+            "image": "https://www.sweetsurrender.com/images/velvet-dream.jpg",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "USD",
+              "price": "3.50"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Choco Bliss Cupcake",
+            "description": "Decadent chocolate cake with a smooth chocolate ganache.",
+            "image": "https://placehold.co/300x300/A2E4B8/7B3F00?text=Choco+Bliss",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "USD",
+              "price": "3.75"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Strawberry Kiss Cupcake",
+            "description": "A light vanilla cupcake filled with fresh strawberry compote, topped with whipped cream frosting and a fresh strawberry.",
+            "image": "https://placehold.co/400x300/FFB6C1/7B3F00?text=Strawberry+Shortcake",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "USD",
+              "price": "4.00"
+            }
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-creamy-vanilla text-chocolate-brown">
     <!-- Main Navigation Bar (Initially visible) -->
@@ -208,8 +318,7 @@
         <p
           class="text-xl md:text-2xl text-creamy-vanilla mb-8 max-w-2xl mx-auto"
         >
-          Baking happiness, one delightful treat at a time. Discover your new
-          favorite!
+          Baking happiness, one delightful cupcake at a time. Discover your new favorite sweet treat from Sweet Surrender!
         </p>
         <a 
           href="#cupcakes"
@@ -238,8 +347,9 @@
           >
             <img
               src="/Users/waseem/Downloads/IMG_0114.jpeg"
-              alt="Velvet Dream Cupcake"
+              alt="Velvet Dream Cupcake - Classic red velvet with cream cheese frosting"
               class="w-full h-48 object-cover rounded-lg mb-4"
+              loading="lazy"
             />
             <h3 class="text-2xl font-heading text-pastel-pink mb-2">
               Velvet Dream
@@ -255,8 +365,9 @@
           >
             <img
               src="https://placehold.co/300x300/A2E4B8/7B3F00?text=Choco+Bliss"
-              alt="Chocolate Bliss Cupcake"
+              alt="Placeholder image for Choco Bliss Cupcake"
               class="w-full h-48 object-cover rounded-lg mb-4"
+              loading="lazy"
             />
             <h3 class="text-2xl font-heading text-mint-green mb-2">
               Choco Bliss
@@ -272,8 +383,9 @@
           >
             <img
               src="https://placehold.co/300x300/F5F5DC/7B3F00?text=Lemon+Zest"
-              alt="Lemon Zest Cupcake"
+              alt="Placeholder image for Lemon Zest Cupcake"
               class="w-full h-48 object-cover rounded-lg mb-4"
+              loading="lazy"
             />
             <h3 class="text-2xl font-heading text-yellow-400 mb-2">
               Lemon Zest
@@ -289,8 +401,9 @@
           >
             <img
               src="https://placehold.co/300x300/D2B48C/7B3F00?text=Caramel+Swirl"
-              alt="Caramel Swirl Cupcake"
+              alt="Placeholder image for Caramel Swirl Cupcake"
               class="w-full h-48 object-cover rounded-lg mb-4"
+              loading="lazy"
             />
             <h3 class="text-2xl font-heading text-yellow-600 mb-2">
               Caramel Swirl
@@ -321,8 +434,9 @@
           >
             <img
               src="https://placehold.co/400x300/FFB6C1/7B3F00?text=Strawberry+Shortcake"
-              alt="Strawberry Shortcake Cupcake"
+              alt="Placeholder image for Strawberry Kiss Cupcake"
               class="w-full h-64 object-cover"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-3xl font-heading text-pastel-pink mb-3">
@@ -350,8 +464,9 @@
           >
             <img
               src="https://placehold.co/400x300/87CEEB/7B3F00?text=Blueberry+Blast"
-              alt="Blueberry Blast Cupcake"
+              alt="Placeholder image for Blueberry Blast Cupcake"
               class="w-full h-64 object-cover"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-3xl font-heading text-blue-400 mb-3">
@@ -379,8 +494,9 @@
           >
             <img
               src="https://placehold.co/400x300/98FB98/7B3F00?text=Mint+Condition"
-              alt="Mint Condition Cupcake"
+              alt="Placeholder image for Mint Condition Cupcake"
               class="w-full h-64 object-cover"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-3xl font-heading text-mint-green mb-3">
@@ -408,8 +524,9 @@
           >
             <img
               src="https://placehold.co/400x300/E6E6FA/7B3F00?text=Lavender+Dream"
-              alt="Lavender Dream Cupcake"
+              alt="Placeholder image for Lavender Dream Cupcake"
               class="w-full h-64 object-cover"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-3xl font-heading text-purple-400 mb-3">
@@ -437,8 +554,9 @@
           >
             <img
               src="https://placehold.co/400x300/FFA07A/7B3F00?text=Peach+Perfection"
-              alt="Peach Perfection Cupcake"
+              alt="Placeholder image for Peach Perfection Cupcake"
               class="w-full h-64 object-cover"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-3xl font-heading text-orange-400 mb-3">
@@ -466,8 +584,9 @@
           >
             <img
               src="https://placehold.co/400x300/FFD700/7B3F00?text=Vegan+Vanilla+Bean"
-              alt="Vegan Vanilla Bean Cupcake"
+              alt="Placeholder image for Vegan Vanilla Bean Cupcake"
               class="w-full h-64 object-cover"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-3xl font-heading text-yellow-500 mb-3">
@@ -507,65 +626,73 @@
           <div data-aos="zoom-in" data-aos-delay="100">
             <img
               src="https://placehold.co/400x400/FFC0CB/7B3F00?text=Birthday+Joy"
-              alt="Birthday Cupcakes"
+              alt="Gallery image of Birthday Cupcakes"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
               data-caption="Colorful cupcakes for a joyful birthday celebration."
+              loading="lazy"
             />
           </div>
           <div data-aos="zoom-in" data-aos-delay="200">
             <img
               src="https://placehold.co/400x400/ADD8E6/7B3F00?text=Wedding+Elegance"
-              alt="Wedding Cupcake Tower"
+              alt="Gallery image of Wedding Cupcake Tower"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
               data-caption="Elegant cupcake tower for a beautiful wedding."
+              loading="lazy"
             />
           </div>
           <div data-aos="zoom-in" data-aos-delay="300">
             <img
               src="https://placehold.co/400x400/90EE90/7B3F00?text=Corporate+Treats"
-              alt="Corporate Event Cupcakes"
+              alt="Gallery image of Corporate Event Cupcakes"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
               data-caption="Custom branded cupcakes for a corporate event."
+              loading="lazy"
             />
           </div>
           <div data-aos="zoom-in" data-aos-delay="400">
             <img
               src="https://placehold.co/400x400/FFFFE0/7B3F00?text=Holiday+Specials"
-              alt="Holiday Cupcakes"
+              alt="Gallery image of Holiday Cupcakes"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
               data-caption="Festive cupcakes for the holiday season."
+              loading="lazy"
             />
           </div>
           <div data-aos="zoom-in" data-aos-delay="100">
             <img
               src="https://placehold.co/400x400/E0BBE4/7B3F00?text=Custom+Design+1"
-              alt="Custom Design Cupcake"
+              alt="Gallery image of Custom Design Cupcake"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
               data-caption="Unique custom designed cupcake for a special request."
+              loading="lazy"
             />
           </div>
           <div data-aos="zoom-in" data-aos-delay="200">
             <img
               src="https://placehold.co/400x400/FADADD/7B3F00?text=Baby+Shower+Sweetness"
-              alt="Baby Shower Cupcakes"
+              alt="Gallery image of Baby Shower Cupcakes"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
               data-caption="Adorable cupcakes for a sweet baby shower."
+              loading="lazy"
             />
           </div>
           <div data-aos="zoom-in" data-aos-delay="300">
             <img
               src="https://placehold.co/400x400/FFB347/7B3F00?text=Autumn+Flavors"
-              alt="Autumn Themed Cupcakes"
+              alt="Gallery image of Autumn Themed Cupcakes"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
               data-caption="Warm and cozy autumn-themed cupcakes."
+              loading="lazy"
             />
           </div>
           <div data-aos="zoom-in" data-aos-delay="400">
             <img
               src="https://placehold.co/400x400/B4E8C8/7B3F00?text=Garden+Party+Delights"
-              alt="Garden Party Cupcakes"
+              alt="Gallery image of Garden Party Cupcakes"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
               data-caption="Delightful cupcakes perfect for a garden party."
+              loading="lazy"
             />
           </div>
         </div>
@@ -594,8 +721,9 @@
           <div class="md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
             <img
               src="https://placehold.co/600x400/F5F5DC/7B3F00?text=Our+Team+Baking"
-              alt="Our Team Baking"
+              alt="Photo of the Sweet Surrender team baking cupcakes with care"
               class="rounded-xl shadow-xl w-full"
+              loading="lazy"
             />
           </div>
           <div class="md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
@@ -603,32 +731,33 @@
               From Passion to Perfection
             </h3>
             <p class="text-gray-700 mb-4 leading-relaxed">
-              Sweet Surrender started in a small home kitchen, fueled by a
-              lifelong passion for baking and a dream to spread joy through
-              delicious, handcrafted cupcakes. We believe that the best treats
+              Sweet Surrender, your friendly neighborhood bakery, started in a small home kitchen, fueled by a
+              lifelong passion for baking and a dream to spread joy through our delicious, handcrafted cupcakes. We believe that the best treats
               are made with love, the finest ingredients, and a sprinkle of
               creativity.
             </p>
             <p class="text-gray-700 mb-4 leading-relaxed">
-              Our unique selling points? We use locally sourced ingredients
+              Our unique selling points as a premier cupcake bakery? We use locally sourced ingredients
               whenever possible, offer a wide range of classic and innovative
               flavors (including vegan and gluten-free options!), and pour our
-              hearts into every single bake. We're not just a bakery; we're a
+              hearts into every single bake. We're not just selling cupcakes; we're a
               part of your celebrations.
             </p>
             <img
               src="https://placehold.co/300x200/FFD1DC/7B3F00?text=Baking+Process"
-              alt="Baking Process"
+              alt="Close-up of the cupcake baking process"
               class="rounded-lg shadow-md mt-4 inline-block mr-4"
               data-aos="zoom-in"
               data-aos-delay="200"
+              loading="lazy"
             />
             <img
               src="https://placehold.co/300x200/A2E4B8/7B3F00?text=Happy+Baker"
-              alt="Happy Baker"
+              alt="A happy baker with freshly made cupcakes"
               class="rounded-lg shadow-md mt-4 inline-block"
               data-aos="zoom-in"
               data-aos-delay="400"
+              loading="lazy"
             />
           </div>
         </div>
