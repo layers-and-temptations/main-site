@@ -17,6 +17,12 @@ h6,
   font-family: "Pacifico", cursive;
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* --- Color Palette Utilities --- */
 /* These classes are used by Tailwind and custom components for consistent theming. */
 /* Primary Colors */
