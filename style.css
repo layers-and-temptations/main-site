@@ -53,17 +53,21 @@ body {
   background-color: #fdfbf5;
 }
 .text-creamy-vanilla {
-  color: #f5f5dc;
+  color: #795556;
 }
 
 /* Chocolate Brown - primary text and accents */
 /* Accent Colors */
 .bg-chocolate-brown {
-  background-color: #7b3f00;
+  background-color: #d7ab90;
 }
 
-.text-white {
-  color: #ffffff;
+.text-primary {
+  color: #371108;
+}
+
+.bg-primary {
+  background-color: #371108;
 }
 
 .text-chocolate-brown {
@@ -102,12 +106,6 @@ body {
 }
 .sticky-nav.scrolled {
   transform: translateY(0);
-  background-color: rgba(
-    245,
-    245,
-    220,
-    0.95
-  ); /* Slightly transparent Creamy Vanilla */
 }
 
 /* Cupcake Card Styles */
