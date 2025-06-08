@@ -81,7 +81,7 @@ body {
 
 /* Hero Parallax Effect */
 .hero-section {
-  background-image: url(resources/desserts-banner.jpg);
+  background-image: url(resources/desserts.jpg);
   background-attachment: fixed; /* Creates the parallax effect */
   background-position: center;
   background-repeat: no-repeat;
