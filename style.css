@@ -67,7 +67,7 @@ body {
 }
 
 .text-chocolate-brown {
-  color: #7b3f00;
+  color: #d7ab90;
 }
 .border-chocolate-brown {
   border-color: #7b3f00;
@@ -77,7 +77,7 @@ body {
 
 /* Hero Parallax Effect */
 .hero-section {
-  background-image: url(../../../../Downloads/IMG_0105.jpeg);
+  background-image: url(resources/desserts-banner.jpg);
   background-attachment: fixed; /* Creates the parallax effect */
   background-position: center;
   background-repeat: no-repeat;
