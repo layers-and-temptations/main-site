@@ -1,218 +1,118 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sweet Surrender - Delicious Cupcakes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="bg-creamy-vanilla text-chocolate-brown">
-    <!-- Main Navigation Bar (Initially visible) -->
-    <nav id="mainNav"
-      class="bg-creamy-vanilla/80 text-primary backdrop-blur-md shadow-md fixed w-full z-50 transition-all duration-300">
-      <div class="container mx-auto px-6 py-3">
-        <div class="flex items-center justify-between">
-          <a href="#"
-            class="flex items-center space-x-3 text-3xl font-heading text-primary hover:text-text-primary transition-colors">
-            <img src="resources/Layers_and_Temptations_Logo_no_bg.png" alt="Layers & Temptations Logo" class="h-10 w-10 object-contain" />
-            <span>Layers & Temptations</span>
-          </a>
 
-          <div class="hidden md:flex space-x-6 items-center">
-            <a
-              href="#home"
-              class="nav-link hover:text-text-primary transition-colors"
-              >Home</a
-            >
-            <a
-              href="#about"
-              class="nav-link hover:text-text-primary transition-colors"
-              >About Us</a
-            >
-            <a
-              href="#menu"
-              class="nav-link hover:text-text-primary transition-colors"
-              >Menu</a
-            >
-            <a
-              href="#gallery"
-              class="nav-link hover:text-text-primary transition-colors"
-              >Gallery</a
-            >
-            <a
-              href="#contact"
-              class="nav-link hover:text-text-primary transition-colors"
-              >Contact</a
-            >
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Surrender - Delicious Cupcakes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-          <div class="md:hidden">
-            <button
-              id="mobileMenuButton"
-              class="text-chocolate-brown focus:outline-none"
-            >
-              <i class="fas fa-bars fa-lg"></i>
-            </button>
-          </div>
+<body class="bg-chocolate-brown text-primary">
+  <!-- Main Navigation Bar (Initially visible) -->
+  <nav id="mainNav"
+    class="bg-creamy-vanilla/80 text-primary backdrop-blur-md shadow-md fixed w-full z-50 transition-all duration-300">
+    <div class="container mx-auto px-6 py-3">
+      <div class="flex items-center justify-between">
+        <a href="#"
+          class="flex items-center space-x-3 text-3xl font-heading text-primary hover:text-primary transition-colors">
+          <img src="resources/Layers_and_Temptations_Logo_no_bg.png" alt="Layers & Temptations Logo"
+            class="h-10 w-10 object-contain" />
+          <span>Layers & Temptations</span>
+        </a>
+
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="#home" class="nav-link hover:text-primary transition-colors">Home</a>
+          <a href="#about" class="nav-link hover:text-primary transition-colors">About Us</a>
+          <a href="#menu" class="nav-link hover:text-primary transition-colors">Menu</a>
+          <a href="#gallery" class="nav-link hover:text-primary transition-colors">Gallery</a>
+          <a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="mobileMenuButton" class="text-primary focus:outline-none">
+            <i class="fas fa-bars fa-lg"></i>
+          </button>
         </div>
       </div>
+    </div>
 
-      <!-- Mobile Menu container for mainNav -->
-      <div id="mobileMenu" class="hidden md:hidden bg-creamy-vanilla shadow-lg">
-        <a
-          href="#home"
-          class="block py-3 px-6 text-sm hover:bg-text-primary hover:text-primary transition-colors nav-link-mobile"
-          >Home</a
-        >
-        <a
-          href="#about"
-          class="block py-3 px-6 text-sm hover:bg-text-primary hover:text-primary transition-colors nav-link-mobile"
-          >About Us</a
-        >
-        <a
-          href="#menu"
-          class="block py-3 px-6 text-sm hover:bg-text-primary hover:text-primary transition-colors nav-link-mobile"
-          >Menu</a
-        >
-        <a
-          href="#gallery"
-          class="block py-3 px-6 text-sm hover:bg-text-primary hover:text-primary transition-colors nav-link-mobile"
-          >Gallery</a
-        >
-        <a
-          href="#contact"
-          class="block py-3 px-6 text-sm hover:bg-text-primary hover:text-primary transition-colors nav-link-mobile"
-          >Contact</a
-        >
-      </div>
-      <!-- End of Mobile Menu (for mainNav) -->
-    </nav>
-    <!-- End of Main Navigation Bar -->
+    <!-- Mobile Menu container for mainNav -->
+    <div id="mobileMenu" class="hidden md:hidden bg-creamy-vanilla  shadow-lg">
+      <a href="#home"
+        class="block py-3 px-6 text-sm hover:bg-bg-chocolate-brown hover:text-white transition-colors nav-link-mobile">Home</a>
+      <a href="#about"
+        class="block py-3 px-6 text-sm hover:bg-bg-chocolate-brown hover:text-white transition-colors nav-link-mobile">About Us</a>
+      <a href="#menu"
+        class="block py-3 px-6 text-sm hover:bg-bg-chocolate-brown hover:text-white transition-colors nav-link-mobile">Menu</a>
+      <a href="#gallery"
+        class="block py-3 px-6 text-sm hover:bg-bg-chocolate-brown hover:text-white transition-colors nav-link-mobile">Gallery</a>
+      <a href="#contact"
+        class="block py-3 px-6 text-sm hover:bg-bg-chocolate-brown hover:text-white transition-colors nav-link-mobile">Contact</a>
+    </div>
+    <!-- End of Mobile Menu (for mainNav) -->
+  </nav>
+  <!-- End of Main Navigation Bar -->
 
-    <!-- Sticky Navigation Bar (Appears on scroll) -->
-    <nav
-      id="stickyNav"
-      class="sticky-nav bg-creamy-vanilla/95 backdrop-blur-md"
-    >
-      <div class="container mx-auto px-6 py-3">
-        <div class="flex items-center justify-between">
-          <a
-            href="#"
-            class="text-3xl font-heading text-chocolate-brown hover:text-text-primary transition-colors"
-            >Sweet Surrender</a
-          >
-          <div class="hidden md:flex space-x-6 items-center">
-            <a
-              href="#home"
-              class="nav-link hover:text-text-primary transition-colors"
-              >Home</a
-            >
-            <a
-              href="#about"
-              class="nav-link hover:text-text-primary transition-colors"
-              >About Us</a
-            >
-            <a
-              href="#menu"
-              class="nav-link hover:text-text-primary transition-colors"
-              >Menu</a
-            >
-            <a
-              href="#gallery"
-              class="nav-link hover:text-text-primary transition-colors"
-              >Gallery</a
-            >
-            <a
-              href="#contact"
-              class="nav-link hover:text-text-primary transition-colors"
-              >Contact</a
-            >
-          </div>
-          <div class="md:hidden">
-            <button
-              id="stickyMobileMenuButton"
-              class="text-chocolate-brown focus:outline-none"
-            >
-              <i class="fas fa-bars fa-lg"></i>
-            </button>
-          </div>
+  <!-- Sticky Navigation Bar (Appears on scroll) -->
+  <nav id="stickyNav" class="sticky-nav bg-creamy-vanilla backdrop-blur-md">
+    <div class="container mx-auto px-6 py-3">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-3xl font-heading text-primary hover:text-primary transition-colors">Sweet Surrender</a>
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="#home" class="nav-link hover:text-primary transition-colors">Home</a>
+          <a href="#about" class="nav-link hover:text-primary transition-colors">About Us</a>
+          <a href="#menu" class="nav-link hover:text-primary transition-colors">Menu</a>
+          <a href="#gallery" class="nav-link hover:text-primary transition-colors">Gallery</a>
+          <a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <button id="stickyMobileMenuButton" class="text-primary focus:outline-none">
+            <i class="fas fa-bars fa-lg"></i>
+          </button>
         </div>
       </div>
-      <!-- Mobile Menu container for stickyNav -->
-      <div
-        id="stickyMobileMenu"
-        class="hidden md:hidden bg-creamy-vanilla shadow-lg"
-      >
-        <a
-          href="#home"
-          class="block py-3 px-6 text-sm hover:bg-text-primary hover:text-primary transition-colors nav-link-mobile-sticky"
-          >Home</a
-        >
-        <a
-          href="#about"
-          class="block py-3 px-6 text-sm hover:bg-text-primary hover:text-primary transition-colors nav-link-mobile-sticky"
-          >About Us</a
-        >
-        <a
-          href="#menu"
-          class="block py-3 px-6 text-sm hover:bg-text-primary hover:text-primary transition-colors nav-link-mobile-sticky"
-          >Menu</a
-        >
-        <a
-          href="#gallery"
-          class="block py-3 px-6 text-sm hover:bg-text-primary hover:text-primary transition-colors nav-link-mobile-sticky"
-          >Gallery</a
-        >
-        <a
-          href="#contact"
-          class="block py-3 px-6 text-sm hover:bg-text-primary hover:text-primary transition-colors nav-link-mobile-sticky"
-          >Contact</a
-        >
-      </div>
-      <!-- End of Mobile Menu (for stickyNav) -->
-    </nav>
-    <!-- End of Sticky Navigation Bar -->
+    </div>
+    <!-- Mobile Menu container for stickyNav -->
+    <div id="stickyMobileMenu" class="hidden md:hidden bg-creamy-vanilla shadow-lg">
+      <a href="#home"
+        class="block py-3 px-6 text-sm hover:bg-primary hover:text-white transition-colors nav-link-mobile-sticky">Home</a>
+      <a href="#about"
+        class="block py-3 px-6 text-sm hover:bg-primary hover:text-white transition-colors nav-link-mobile-sticky">About
+        Us</a>
+      <a href="#menu"
+        class="block py-3 px-6 text-sm hover:bg-primary hover:text-white transition-colors nav-link-mobile-sticky">Menu</a>
+      <a href="#gallery"
+        class="block py-3 px-6 text-sm hover:bg-primary hover:text-white transition-colors nav-link-mobile-sticky">Gallery</a>
+      <a href="#contact"
+        class="block py-3 px-6 text-sm hover:bg-primary hover:text-white transition-colors nav-link-mobile-sticky">Contact</a>
+    </div>
+    <!-- End of Mobile Menu (for stickyNav) -->
+  </nav>
+  <!-- End of Sticky Navigation Bar -->
 
-    <!-- Main Content Wrapper -->
-    <main>
+  <!-- Main Content Wrapper -->
+  <main>
     <!-- Hero Section / Main Page Header -->
-    <header
-      id="home"
-      class="hero-section flex items-center justify-center text-center relative"
-    >
-      <!-- <video class="absolute inset-0 w-full h-full object-cover" src="resources/banner-video.mp4" autoplay loop muted
-        playsinline></video> -->
-      <div class="absolute inset-0 bg-blue/30"></div>
-      <div
-        class="relative z-10 p-6"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-      <h1 class="text-5xl md:text-7xl font-heading text-primary mb-6 -mt-[400px]">
+    <header id="home" class="hero-section flex items-center justify-center text-center relative">
+      <div class="absolute inset-0 bg-primary/10"></div>
+      <div class="relative z-10 p-6" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="text-5xl md:text-7xl font-heading text-primary mb-6 -mt-[400px]">
           Your Occasion, Our Inspiration!
         </h1>
-        <p
-          class="text-xl md:text-2xl text-creamy-vanilla mb-8 max-w-2xl mx-auto"
-        >
+        <p class="text-xl md:text-2xl text-primary mb-8 max-w-2xl mx-auto">
           Baking happiness, one delightful treat at a time. Discover your new
           favourite!
         </p>
-        <a 
-          href="#menu"
-          class="bg-white text-chocolate-brown font-semibold py-3 px-8 rounded-lg text-lg hover:bg-mint-green hover:text-chocolate-brown transition-all duration-300 transform hover:scale-105 shadow-lg"
-        >
+        <a href="#menu"
+          class="bg-creamy-vanilla text-primary font-semibold py-3 px-8 rounded-lg text-lg hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg">
           Discover Our Flavours <i class="fas fa-arrow-right ml-2"></i>
         </a>
       </div>
@@ -222,75 +122,48 @@
     <!-- Star Attractions Section -->
     <section class="section-padding bg-creamy-vanilla">
       <div class="container mx-auto px-6 text-center">
-        <h2
-          class="text-4xl font-heading mb-12 text-chocolate-brown"
-          data-aos="fade-up"
-        >
+        <h2 class="text-4xl font-heading mb-12 text-primary" data-aos="fade-up">
           Our Star Attractions
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div
-            class="bg-white p-6 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <img
-              src="/Users/waseem/Downloads/IMG_0114.jpeg"
-              alt="Velvet Dream Cupcake"
-              class="w-full h-48 object-cover rounded-lg mb-4"
-            />
-            <h3 class="text-2xl font-heading text-pastel-pink mb-2">
+          <div class="bg-creamy-vanilla p-6 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300"
+            data-aos="fade-up" data-aos-delay="100">
+            <img src="/Users/waseem/Downloads/IMG_0114.jpeg" alt="Velvet Dream Cupcake"
+              class="w-full h-48 object-cover rounded-lg mb-4" />
+            <h3 class="text-2xl font-heading text-primary mb-2">
               Velvet Dream
             </h3>
             <p class="text-sm text-gray-600">
               Classic red velvet with a rich cream cheese frosting.
             </p>
           </div>
-          <div
-            class="bg-white p-6 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <img
-              src="https://placehold.co/300x300/A2E4B8/7B3F00?text=Choco+Bliss"
-              alt="Chocolate Bliss Cupcake"
-              class="w-full h-48 object-cover rounded-lg mb-4"
-            />
-            <h3 class="text-2xl font-heading text-mint-green mb-2">
+          <div class="bg-creamy-vanilla p-6 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300"
+            data-aos="fade-up" data-aos-delay="200">
+            <img src="https://placehold.co/300x300/A2E4B8/7B3F00?text=Choco+Bliss" alt="Chocolate Bliss Cupcake"
+              class="w-full h-48 object-cover rounded-lg mb-4" />
+            <h3 class="text-2xl font-heading text-primary mb-2">
               Choco Bliss
             </h3>
             <p class="text-sm text-gray-600">
               Decadent chocolate cake with a smooth chocolate ganache.
             </p>
           </div>
-          <div
-            class="bg-white p-6 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <img
-              src="https://placehold.co/300x300/F5F5DC/7B3F00?text=Lemon+Zest"
-              alt="Lemon Zest Cupcake"
-              class="w-full h-48 object-cover rounded-lg mb-4"
-            />
-            <h3 class="text-2xl font-heading text-yellow-400 mb-2">
+          <div class="bg-creamy-vanilla p-6 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300"
+            data-aos="fade-up" data-aos-delay="300">
+            <img src="https://placehold.co/300x300/F5F5DC/7B3F00?text=Lemon+Zest" alt="Lemon Zest Cupcake"
+              class="w-full h-48 object-cover rounded-lg mb-4" />
+            <h3 class="text-2xl font-heading text-primary mb-2">
               Lemon Zest
             </h3>
             <p class="text-sm text-gray-600">
               Tangy lemon cupcake with a light lemon buttercream.
             </p>
           </div>
-          <div
-            class="bg-white p-6 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <img
-              src="https://placehold.co/300x300/D2B48C/7B3F00?text=Caramel+Swirl"
-              alt="Caramel Swirl Cupcake"
-              class="w-full h-48 object-cover rounded-lg mb-4"
-            />
-            <h3 class="text-2xl font-heading text-yellow-600 mb-2">
+          <div class="bg-creamy-vanilla p-6 rounded-xl shadow-xl transform hover:scale-105 transition-transform duration-300"
+            data-aos="fade-up" data-aos-delay="400">
+            <img src="https://placehold.co/300x300/D2B48C/7B3F00?text=Caramel+Swirl" alt="Caramel Swirl Cupcake"
+              class="w-full h-48 object-cover rounded-lg mb-4" />
+            <h3 class="text-2xl font-heading text-primary mb-2">
               Caramel Swirl
             </h3>
             <p class="text-sm text-gray-600">
@@ -303,27 +176,18 @@
     <!-- End of Star Attractions Section -->
 
     <!-- Cupcakes Showcase Section -->
-    <section id="menu" class="section-padding bg-pastel-pink/30">
+    <section id="menu" class="section-padding bg-primary/5">
       <div class="container mx-auto px-6">
-        <h2
-          class="text-4xl font-heading text-center mb-12 text-chocolate-brown"
-          data-aos="fade-up"
-        >
+        <h2 class="text-4xl font-heading text-center mb-12 text-primary" data-aos="fade-up">
           Our Delectable Creations
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          <div
-            class="cupcake-card bg-white rounded-xl shadow-2xl overflow-hidden group"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <img
-              src="https://placehold.co/400x300/FFB6C1/7B3F00?text=Strawberry+Shortcake"
-              alt="Strawberry Shortcake Cupcake"
-              class="w-full h-64 object-cover"
-            />
+          <div class="cupcake-card bg-creamy-vanilla rounded-xl shadow-2xl overflow-hidden group" data-aos="fade-up"
+            data-aos-delay="100">
+            <img src="https://placehold.co/400x300/FFB6C1/7B3F00?text=Strawberry+Shortcake"
+              alt="Strawberry Shortcake Cupcake" class="w-full h-64 object-cover" />
             <div class="p-6">
-              <h3 class="text-3xl font-heading text-pastel-pink mb-3">
+              <h3 class="text-3xl font-heading text-primary mb-3">
                 Strawberry Kiss
               </h3>
               <p class="text-gray-700 mb-4">
@@ -341,18 +205,12 @@
               </div>
             </div>
           </div>
-          <div
-            class="cupcake-card bg-white rounded-xl shadow-2xl overflow-hidden group"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <img
-              src="https://placehold.co/400x300/87CEEB/7B3F00?text=Blueberry+Blast"
-              alt="Blueberry Blast Cupcake"
-              class="w-full h-64 object-cover"
-            />
+          <div class="cupcake-card bg-creamy-vanilla rounded-xl shadow-2xl overflow-hidden group" data-aos="fade-up"
+            data-aos-delay="200">
+            <img src="https://placehold.co/400x300/87CEEB/7B3F00?text=Blueberry+Blast" alt="Blueberry Blast Cupcake"
+              class="w-full h-64 object-cover" />
             <div class="p-6">
-              <h3 class="text-3xl font-heading text-blue-400 mb-3">
+              <h3 class="text-3xl font-heading text-primary mb-3">
                 Blueberry Blast
               </h3>
               <p class="text-gray-700 mb-4">
@@ -370,18 +228,12 @@
               </div>
             </div>
           </div>
-          <div
-            class="cupcake-card bg-white rounded-xl shadow-2xl overflow-hidden group"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <img
-              src="https://placehold.co/400x300/98FB98/7B3F00?text=Mint+Condition"
-              alt="Mint Condition Cupcake"
-              class="w-full h-64 object-cover"
-            />
+          <div class="cupcake-card bg-creamy-vanilla rounded-xl shadow-2xl overflow-hidden group" data-aos="fade-up"
+            data-aos-delay="300">
+            <img src="https://placehold.co/400x300/98FB98/7B3F00?text=Mint+Condition" alt="Mint Condition Cupcake"
+              class="w-full h-64 object-cover" />
             <div class="p-6">
-              <h3 class="text-3xl font-heading text-mint-green mb-3">
+              <h3 class="text-3xl font-heading text-primary mb-3">
                 Mint Condition
               </h3>
               <p class="text-gray-700 mb-4">
@@ -399,18 +251,12 @@
               </div>
             </div>
           </div>
-          <div
-            class="cupcake-card bg-white rounded-xl shadow-2xl overflow-hidden group"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <img
-              src="https://placehold.co/400x300/E6E6FA/7B3F00?text=Lavender+Dream"
-              alt="Lavender Dream Cupcake"
-              class="w-full h-64 object-cover"
-            />
+          <div class="cupcake-card bg-creamy-vanilla rounded-xl shadow-2xl overflow-hidden group" data-aos="fade-up"
+            data-aos-delay="100">
+            <img src="https://placehold.co/400x300/E6E6FA/7B3F00?text=Lavender+Dream" alt="Lavender Dream Cupcake"
+              class="w-full h-64 object-cover" />
             <div class="p-6">
-              <h3 class="text-3xl font-heading text-purple-400 mb-3">
+              <h3 class="text-3xl font-heading text-primary mb-3">
                 Lavender Dream
               </h3>
               <p class="text-gray-700 mb-4">
@@ -428,18 +274,12 @@
               </div>
             </div>
           </div>
-          <div
-            class="cupcake-card bg-white rounded-xl shadow-2xl overflow-hidden group"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <img
-              src="https://placehold.co/400x300/FFA07A/7B3F00?text=Peach+Perfection"
-              alt="Peach Perfection Cupcake"
-              class="w-full h-64 object-cover"
-            />
+          <div class="cupcake-card bg-creamy-vanilla rounded-xl shadow-2xl overflow-hidden group" data-aos="fade-up"
+            data-aos-delay="200">
+            <img src="https://placehold.co/400x300/FFA07A/7B3F00?text=Peach+Perfection" alt="Peach Perfection Cupcake"
+              class="w-full h-64 object-cover" />
             <div class="p-6">
-              <h3 class="text-3xl font-heading text-orange-400 mb-3">
+              <h3 class="text-3xl font-heading text-primary mb-3">
                 Peach Perfection
               </h3>
               <p class="text-gray-700 mb-4">
@@ -457,18 +297,12 @@
               </div>
             </div>
           </div>
-          <div
-            class="cupcake-card bg-white rounded-xl shadow-2xl overflow-hidden group"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <img
-              src="https://placehold.co/400x300/FFD700/7B3F00?text=Vegan+Vanilla+Bean"
-              alt="Vegan Vanilla Bean Cupcake"
-              class="w-full h-64 object-cover"
-            />
+          <div class="cupcake-card bg-creamy-vanilla rounded-xl shadow-2xl overflow-hidden group" data-aos="fade-up"
+            data-aos-delay="300">
+            <img src="https://placehold.co/400x300/FFD700/7B3F00?text=Vegan+Vanilla+Bean"
+              alt="Vegan Vanilla Bean Cupcake" class="w-full h-64 object-cover" />
             <div class="p-6">
-              <h3 class="text-3xl font-heading text-yellow-500 mb-3">
+              <h3 class="text-3xl font-heading text-primary mb-3">
                 Vegan Vanilla Bean
               </h3>
               <p class="text-gray-700 mb-4">
@@ -495,76 +329,49 @@
     <!-- Image Gallery Section -->
     <section id="gallery" class="section-padding bg-creamy-vanilla">
       <div class="container mx-auto px-6">
-        <h2
-          class="text-4xl font-heading text-center mb-12 text-chocolate-brown"
-          data-aos="fade-up"
-        >
+        <h2 class="text-4xl font-heading text-center mb-12 text-primary" data-aos="fade-up">
           Sweet Moments, Captured
         </h2>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <div data-aos="zoom-in" data-aos-delay="100">
-            <img
-              src="https://placehold.co/400x400/FFC0CB/7B3F00?text=Birthday+Joy"
-              alt="Birthday Cupcakes"
+            <img src="https://placehold.co/400x400/FFC0CB/7B3F00?text=Birthday+Joy" alt="Birthday Cupcakes"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
-              data-caption="Colorful cupcakes for a joyful birthday celebration."
-            />
+              data-caption="Colorful cupcakes for a joyful birthday celebration." />
           </div>
           <div data-aos="zoom-in" data-aos-delay="200">
-            <img
-              src="https://placehold.co/400x400/ADD8E6/7B3F00?text=Wedding+Elegance"
-              alt="Wedding Cupcake Tower"
+            <img src="https://placehold.co/400x400/ADD8E6/7B3F00?text=Wedding+Elegance" alt="Wedding Cupcake Tower"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
-              data-caption="Elegant cupcake tower for a beautiful wedding."
-            />
+              data-caption="Elegant cupcake tower for a beautiful wedding." />
           </div>
           <div data-aos="zoom-in" data-aos-delay="300">
-            <img
-              src="https://placehold.co/400x400/90EE90/7B3F00?text=Corporate+Treats"
-              alt="Corporate Event Cupcakes"
+            <img src="https://placehold.co/400x400/90EE90/7B3F00?text=Corporate+Treats" alt="Corporate Event Cupcakes"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
-              data-caption="Custom branded cupcakes for a corporate event."
-            />
+              data-caption="Custom branded cupcakes for a corporate event." />
           </div>
           <div data-aos="zoom-in" data-aos-delay="400">
-            <img
-              src="https://placehold.co/400x400/FFFFE0/7B3F00?text=Holiday+Specials"
-              alt="Holiday Cupcakes"
+            <img src="https://placehold.co/400x400/FFFFE0/7B3F00?text=Holiday+Specials" alt="Holiday Cupcakes"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
-              data-caption="Festive cupcakes for the holiday season."
-            />
+              data-caption="Festive cupcakes for the holiday season." />
           </div>
           <div data-aos="zoom-in" data-aos-delay="100">
-            <img
-              src="https://placehold.co/400x400/E0BBE4/7B3F00?text=Custom+Design+1"
-              alt="Custom Design Cupcake"
+            <img src="https://placehold.co/400x400/E0BBE4/7B3F00?text=Custom+Design+1" alt="Custom Design Cupcake"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
-              data-caption="Unique custom designed cupcake for a special request."
-            />
+              data-caption="Unique custom designed cupcake for a special request." />
           </div>
           <div data-aos="zoom-in" data-aos-delay="200">
-            <img
-              src="https://placehold.co/400x400/FADADD/7B3F00?text=Baby+Shower+Sweetness"
-              alt="Baby Shower Cupcakes"
+            <img src="https://placehold.co/400x400/FADADD/7B3F00?text=Baby+Shower+Sweetness" alt="Baby Shower Cupcakes"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
-              data-caption="Adorable cupcakes for a sweet baby shower."
-            />
+              data-caption="Adorable cupcakes for a sweet baby shower." />
           </div>
           <div data-aos="zoom-in" data-aos-delay="300">
-            <img
-              src="https://placehold.co/400x400/FFB347/7B3F00?text=Autumn+Flavors"
-              alt="Autumn Themed Cupcakes"
+            <img src="https://placehold.co/400x400/FFB347/7B3F00?text=Autumn+Flavors" alt="Autumn Themed Cupcakes"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
-              data-caption="Warm and cozy autumn-themed cupcakes."
-            />
+              data-caption="Warm and cozy autumn-themed cupcakes." />
           </div>
           <div data-aos="zoom-in" data-aos-delay="400">
-            <img
-              src="https://placehold.co/400x400/B4E8C8/7B3F00?text=Garden+Party+Delights"
-              alt="Garden Party Cupcakes"
+            <img src="https://placehold.co/400x400/B4E8C8/7B3F00?text=Garden+Party+Delights" alt="Garden Party Cupcakes"
               class="gallery-img rounded-lg shadow-lg cursor-pointer hover:opacity-80 transition-opacity duration-300 w-full h-full object-cover"
-              data-caption="Delightful cupcakes perfect for a garden party."
-            />
+              data-caption="Delightful cupcakes perfect for a garden party." />
           </div>
         </div>
       </div>
@@ -580,24 +387,18 @@
     <!-- End of Lightbox -->
 
     <!-- About Us Section -->
-    <section id="about" class="section-padding bg-mint-green/30">
+    <section id="about" class="section-padding bg-primary/5">
       <div class="container mx-auto px-6">
-        <h2
-          class="text-4xl font-heading text-center mb-12 text-chocolate-brown"
-          data-aos="fade-up"
-        >
+        <h2 class="text-4xl font-heading text-center mb-12 text-primary" data-aos="fade-up">
           Our Story: Baked with Love
         </h2>
         <div class="flex flex-col md:flex-row items-center gap-10">
           <div class="md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
-            <img
-              src="https://placehold.co/600x400/F5F5DC/7B3F00?text=Our+Team+Baking"
-              alt="Our Team Baking"
-              class="rounded-xl shadow-xl w-full"
-            />
+            <img src="https://placehold.co/600x400/F5F5DC/7B3F00?text=Our+Team+Baking" alt="Our Team Baking"
+              class="rounded-xl shadow-xl w-full" />
           </div>
           <div class="md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
-            <h3 class="text-3xl font-heading text-chocolate-brown mb-4">
+            <h3 class="text-3xl font-heading text-primary mb-4">
               From Passion to Perfection
             </h3>
             <p class="text-gray-700 mb-4 leading-relaxed">
@@ -614,20 +415,10 @@
               hearts into every single bake. We're not just a bakery; we're a
               part of your celebrations.
             </p>
-            <img
-              src="https://placehold.co/300x200/FFD1DC/7B3F00?text=Baking+Process"
-              alt="Baking Process"
-              class="rounded-lg shadow-md mt-4 inline-block mr-4"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            />
-            <img
-              src="https://placehold.co/300x200/A2E4B8/7B3F00?text=Happy+Baker"
-              alt="Happy Baker"
-              class="rounded-lg shadow-md mt-4 inline-block"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            />
+            <img src="https://placehold.co/300x200/FFD1DC/7B3F00?text=Baking+Process" alt="Baking Process"
+              class="rounded-lg shadow-md mt-4 inline-block mr-4" data-aos="zoom-in" data-aos-delay="200" />
+            <img src="https://placehold.co/300x200/A2E4B8/7B3F00?text=Happy+Baker" alt="Happy Baker"
+              class="rounded-lg shadow-md mt-4 inline-block" data-aos="zoom-in" data-aos-delay="400" />
           </div>
         </div>
       </div>
@@ -637,85 +428,41 @@
     <!-- Contact Section -->
     <section id="contact" class="section-padding bg-creamy-vanilla">
       <div class="container mx-auto px-6">
-        <h2
-          class="text-4xl font-heading text-center mb-12 text-chocolate-brown"
-          data-aos="fade-up"
-        >
+        <h2 class="text-4xl font-heading text-center mb-12 text-primary" data-aos="fade-up">
           Get in Touch!
         </h2>
-        <div
-          class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
+        <div class="max-w-3xl mx-auto bg-creamy-vanilla p-8 md:p-12 rounded-xl shadow-2xl" data-aos="fade-up"
+          data-aos-delay="200">
           <form action="#" method="POST">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label
-                  for="name"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Full Name</label
-                >
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pastel-pink focus:border-pastel-pink transition-colors"
-                  placeholder="Your Name"
-                />
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                <input type="text" name="name" id="name" required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors"
+                  placeholder="Your Name" />
               </div>
               <div>
-                <label
-                  for="email"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Email Address</label
-                >
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pastel-pink focus:border-pastel-pink transition-colors"
-                  placeholder="you@example.com"
-                />
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                <input type="email" name="email" id="email" required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors"
+                  placeholder="you@example.com" />
               </div>
             </div>
             <div class="mb-6">
-              <label
-                for="subject"
-                class="block text-sm font-medium text-gray-700 mb-1"
-                >Subject</label
-              >
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pastel-pink focus:border-pastel-pink transition-colors"
-                placeholder="Order Inquiry, Feedback, etc."
-              />
+              <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+              <input type="text" name="subject" id="subject" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors"
+                placeholder="Order Inquiry, Feedback, etc." />
             </div>
             <div class="mb-6">
-              <label
-                for="message"
-                class="block text-sm font-medium text-gray-700 mb-1"
-                >Message</label
-              >
-              <textarea
-                name="message"
-                id="message"
-                rows="5"
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-pastel-pink focus:border-pastel-pink transition-colors"
-                placeholder="Tell us about your cupcake dreams..."
-              ></textarea>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea name="message" id="message" rows="5" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors"
+                placeholder="Tell us about your cupcake dreams..."></textarea>
             </div>
             <div>
-              <button
-                type="submit"
-                class="w-full bg-pastel-pink text-chocolate-brown font-semibold py-3 px-6 rounded-lg text-lg hover:bg-mint-green transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
+              <button type="submit"
+                class="w-full bg-primary text-white font-semibold py-3 px-6 rounded-lg text-lg hover:bg-primary/80 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Send Message <i class="fas fa-paper-plane ml-2"></i>
               </button>
             </div>
@@ -725,26 +472,14 @@
               Or connect with us on social media:
             </p>
             <div class="flex justify-center space-x-6">
-              <a
-                href="#"
-                class="text-chocolate-brown hover:text-pastel-pink transition-colors text-2xl"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="#"
-                class="text-chocolate-brown hover:text-pastel-pink transition-colors text-2xl"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a
-                href="#"
-                class="text-chocolate-brown hover:text-pastel-pink transition-colors text-2xl"
-                ><i class="fab fa-pinterest-p"></i
-              ></a>
-              <a
-                href="#"
-                class="text-chocolate-brown hover:text-pastel-pink transition-colors text-2xl"
-                ><i class="fab fa-twitter"></i
-              ></a>
+              <a href="#" class="text-primary hover:text-primary transition-colors text-2xl"><i
+                  class="fab fa-instagram"></i></a>
+              <a href="#" class="text-primary hover:text-primary transition-colors text-2xl"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-primary hover:text-primary transition-colors text-2xl"><i
+                  class="fab fa-pinterest-p"></i></a>
+              <a href="#" class="text-primary hover:text-primary transition-colors text-2xl"><i
+                  class="fab fa-twitter"></i></a>
             </div>
           </div>
         </div>
@@ -753,13 +488,11 @@
     <!-- End of Contact Section -->
 
     <!-- Page Footer -->
-    <footer class="bg-chocolate-brown text-creamy-vanilla py-12">
+    <footer class="bg-chocolate-brown text-white py-12">
       <div class="container mx-auto px-6">
-        <div
-          class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
-        >
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
-            <h4 class="text-2xl font-heading mb-4 text-pastel-pink">
+            <h4 class="text-2xl font-heading mb-4 text-white">
               Sweet Surrender
             </h4>
             <p class="text-sm">
@@ -769,103 +502,69 @@
             <p class="text-sm mt-2">123 Cupcake Lane, Sweetville, CA 90210</p>
           </div>
           <div>
-            <h5 class="text-lg font-semibold mb-4 text-pastel-pink">
+            <h5 class="text-lg font-semibold mb-4 text-white">
               Quick Links
             </h5>
             <ul class="space-y-2 text-sm">
               <li>
-                <a href="#home" class="hover:text-mint-green transition-colors"
-                  >Home</a
-                >
+                <a href="#home" class="hover:text-primary transition-colors">Home</a>
               </li>
               <li>
-                <a href="#about" class="hover:text-mint-green transition-colors"
-                  >About Us</a
-                >
+                <a href="#about" class="hover:text-primary transition-colors">About Us</a>
               </li>
               <li>
-                <a
-                  href="#menu"
-                  class="hover:text-mint-green transition-colors"
-                  >Menu</a
-                >
+                <a href="#menu" class="hover:text-primary transition-colors">Menu</a>
               </li>
               <li>
-                <a
-                  href="#gallery"
-                  class="hover:text-mint-green transition-colors"
-                  >Gallery</a
-                >
+                <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
               </li>
               <li>
-                <a
-                  href="#contact"
-                  class="hover:text-mint-green transition-colors"
-                  >Contact</a
-                >
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
               </li>
               <li>
-                <a href="#" class="hover:text-mint-green transition-colors"
-                  >FAQ</a
-                >
+                <a href="#" class="hover:text-primary transition-colors">FAQ</a>
               </li>
             </ul>
           </div>
           <div>
-            <h5 class="text-lg font-semibold mb-4 text-pastel-pink">
+            <h5 class="text-lg font-semibold mb-4 text-white">
               Connect With Us
             </h5>
             <div class="flex justify-center md:justify-start space-x-4 mb-4">
-              <a
-                href="#"
-                class="text-creamy-vanilla hover:text-pastel-pink transition-colors text-xl"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="#"
-                class="text-creamy-vanilla hover:text-pastel-pink transition-colors text-xl"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a
-                href="#"
-                class="text-creamy-vanilla hover:text-pastel-pink transition-colors text-xl"
-                ><i class="fab fa-pinterest-p"></i
-              ></a>
-              <a
-                href="#"
-                class="text-creamy-vanilla hover:text-pastel-pink transition-colors text-xl"
-                ><i class="fab fa-twitter"></i
-              ></a>
+              <a href="#" class="text-white hover:text-primary transition-colors text-xl"><i
+                  class="fab fa-instagram"></i></a>
+              <a href="#" class="text-white hover:text-primary transition-colors text-xl"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-white hover:text-primary transition-colors text-xl"><i
+                  class="fab fa-pinterest-p"></i></a>
+              <a href="#" class="text-white hover:text-primary transition-colors text-xl"><i
+                  class="fab fa-twitter"></i></a>
             </div>
             <p class="text-sm">
               Email:
-              <a
-                href="mailto:info@sweetsurrender.com"
-                class="hover:text-mint-green transition-colors"
-                >info@sweetsurrender.com</a
-              >
+              <a href="mailto:info@sweetsurrender.com"
+                class="hover:text-primary transition-colors">info@sweetsurrender.com</a>
             </p>
             <p class="text-sm">Phone: (555) 123-4567</p>
           </div>
         </div>
-        <div
-          class="mt-10 border-t border-creamy-vanilla/30 pt-8 text-center text-sm"
-        >
+        <div class="mt-10 border-t border-white/30 pt-8 text-center text-sm">
           <p>
             &copy; <span id="currentYear"></span> Sweet Surrender. All Rights
             Reserved. Designed with
-            <i class="fas fa-heart text-pastel-pink"></i>.
+            <i class="fas fa-heart text-white"></i>.
           </p>
         </div>
       </div>
     </footer>
     <!-- End of Page Footer -->
-    </main>
-    <!-- End of Main Content Wrapper -->
+  </main>
+  <!-- End of Main Content Wrapper -->
 
-    <!-- External JavaScript Libraries -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
-  </body>
+  <!-- External JavaScript Libraries -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+
 </html>
