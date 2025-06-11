@@ -183,3 +183,27 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+  const questionButton = item.querySelector('.faq-question');
+  const answerDiv = item.querySelector('.faq-answer');
+  const icon = questionButton.querySelector('i');
+
+  questionButton.addEventListener('click', () => {
+    const isVisible = answerDiv.style.display === 'block';
+    // Close all other answers
+    document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+    document.querySelectorAll('.faq-question i').forEach(icn => icn.classList.replace('fa-chevron-up', 'fa-chevron-down'));
+
+    // Toggle current answer
+    if (!isVisible) {
+      answerDiv.style.display = 'block';
+      icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+    } else {
+      answerDiv.style.display = 'none';
+      icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+    }
+  });
+});
