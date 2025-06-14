@@ -207,3 +207,34 @@ faqItems.forEach(item => {
     }
   });
 });
+
+// Contact Form Submission Handling
+// This script handles the submission of a contact form, sending the data to a server endpoint.
+const contactForm = document.getElementById('contactForm');
+const formSuccessMessage = document.getElementById('formSuccessMessage');
+const contactFormContainer = document.getElementById('contactFormContainer');
+
+if (contactForm && formSuccessMessage) {
+  contactForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      contactForm.reset();
+      contactForm.style.display = 'none';
+      formSuccessMessage.textContent = "🎉 Thank you! Your message has been sent. We'll get back to you soon.";
+      formSuccessMessage.classList.remove('hidden');
+      formSuccessMessage.classList.add('block', 'fade-in');
+    } else {
+      formSuccessMessage.textContent = "Oops! There was a problem submitting your form. Please try again.";
+      formSuccessMessage.classList.remove('hidden');
+      formSuccessMessage.classList.add('block', 'fade-in', 'text-red-700');
+    }    
+  });
+}
